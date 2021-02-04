@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -29,18 +31,27 @@ public class User implements Serializable{
 	private Long id;
 	
 	@Column(name = "NAME")
+	@NotBlank
+	@Size(min = 2, max = 30, message="El nombre debe contener entre 2 y 30 caracteres")
 	private String name;
 	
 	@Column(name = "EMAIL")
+	@NotBlank
+	@Size(min = 8, max = 50, message="El nombre debe contener entre 8 y 50 caracteres")
 	private String email;
 	
 	@Column(name = "ADDRESS")
+	@NotBlank
+	@Size(min = 5, max = 40, message="El nombre debe contener entre 2 y 40 caracteres")
 	private String address;
 	
 	@Column(name = "PASSWORD")
+	@NotBlank
+	@Size(min = 5, max = 30, message="El nombre debe contener entre 5 y 30 caracteres")
 	private String password;
 	
 	@Transient
+	@NotBlank
 	private String confirmPassword;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy= "user")
