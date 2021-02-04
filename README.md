@@ -25,4 +25,6 @@ To add your own database you should access to the folder src\main\resources\appl
 You must run the application as 'Spring Boot App'
 Make sure that your database is connected before run the application.
 
+Once you application is running you should access your localhost:8080/
+
 
