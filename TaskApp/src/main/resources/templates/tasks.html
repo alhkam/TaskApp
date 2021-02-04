@@ -30,8 +30,8 @@
         <div class="table-responsive">
 	         <table id="userTasks" class="table table-hover table-striped">
             <tbody>
-              <tr>
-          			<td>Task</td>
+              <tr th:each="task: ${tasksList}">
+          			<td th:text="${task.description}></td>
               </tr>
 	          </tbody>
          </table>

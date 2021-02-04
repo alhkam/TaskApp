@@ -1,4 +1,4 @@
-package com.ingeteam.taskapp.entities;
+package com.ingeteam.taskapp.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,8 +38,6 @@ public class Task {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
 
 	public String getDescription() {
 		return description;

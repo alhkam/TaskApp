@@ -1,4 +1,4 @@
-package com.ingeteam.taskapp.entities;
+package com.ingeteam.taskapp.entity;
 
 import java.io.Serializable;
 import java.util.Set;

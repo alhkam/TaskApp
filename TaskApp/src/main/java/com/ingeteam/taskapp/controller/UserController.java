@@ -1,11 +1,22 @@
 package com.ingeteam.taskapp.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ingeteam.taskapp.service.TaskService;
+import com.ingeteam.taskapp.service.UserService;
 
 @Controller
 public class UserController {
 
+	@Autowired
+	UserService userService;
+	
+	@Autowired
+	TaskService taskService;
+	
 	@GetMapping("/")
 	public String index() {
 		return "index";
@@ -17,7 +28,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/tasks")
-	public String tasksList() {
+	public String getTasksList(Model model) {
 		return "tasks";
 	}
 }
