@@ -7,15 +7,16 @@ Once you log in, you should be able to see your lists of tasks. Where you could 
 
 This application make use of the following dependencies:
   - org.springframework.boot
-      -->  spring-boot-starter-data-jpa
-      -->  spring-boot-starter-thymeleaf
-      -->  spring-boot-starter-web
-      -->  spring-boot-starter-web-services
-      --> spring-boot-devtools
-      --> spring-boot-starter-test
+      - spring-boot-starter-data-jpa
+      - spring-boot-starter-thymeleaf
+      - spring-boot-starter-web
+      - spring-boot-starter-web-services
+      - spring-boot-devtools
+      - spring-boot-starter-test
+      - spring-boot-starter-validation
  
   - mysql
-      -->  mysql-connector-java
+      - mysql-connector-java
 
 You can watch this info with more detail in the pom.xml
 
